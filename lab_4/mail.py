@@ -36,21 +36,21 @@ message["To"] = receiver_email
 message["Subject"] = subject
 message.attach(MIMEText(body, "plain"))
 
-# --- 4. 执行发送 ---
+
 try:
-    print(f"[*] 正在连接到 {smtp_server}...")
+    print(f"[*] Connecting to {smtp_server}...")
     server = smtplib.SMTP(smtp_server, smtp_port)
-    server.starttls()  # 启用安全传输层协议
+    server.starttls()  
     
-    print("[*] 正在登录...")
+    print("[*] Logging in...")
     server.login(sender_email, password)
     
-    print(f"[*] 正在向 {receiver_email} 发送钓鱼邮件...")
+    print(f"[*] Sending phishing email to {receiver_email}...")
     text = message.as_string()
     server.sendmail(sender_email, receiver_email, text)
     
-    print("[+] 邮件已成功送达！")
+    print("[+] Email sent successfully!")
 except Exception as e:
-    print(f"[-] 发送失败: {e}")
+    print(f"[-] Failed to send email: {e}")
 finally:
     server.quit()
