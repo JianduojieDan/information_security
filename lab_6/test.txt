@@ -101,5 +101,5 @@ drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
 └─$ chgrp jianduojie test.txt 
                                                                                                                
 ┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
-└─$ 
+└─$ This is new for test SSH 
 
