@@ -1,0 +1,105 @@
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ vim test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls
+test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls -la
+total 12
+drwxrwxr-x 2 jianduojie jianduojie 4096 Feb 16 09:32 .
+drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
+-rw-rw-r-- 1 jianduojie jianduojie   18 Feb 16 09:32 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ chmod 700 test.txt    
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls    
+test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls -la
+total 12
+drwxrwxr-x 2 jianduojie jianduojie 4096 Feb 16 09:32 .
+drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
+-rwx------ 1 jianduojie jianduojie   18 Feb 16 09:32 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ chmod 722 test.txt 
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls -la
+total 12
+drwxrwxr-x 2 jianduojie jianduojie 4096 Feb 16 09:32 .
+drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
+-rwx-w--w- 1 jianduojie jianduojie   18 Feb 16 09:32 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ sudo chgrp user2 test.txt                
+[sudo] password for jianduojie: 
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls -la
+total 12
+drwxrwxr-x 2 jianduojie jianduojie 4096 Feb 16 09:32 .
+drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
+-rwx-w--w- 1 jianduojie user2        18 Feb 16 09:32 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ cat test.txt      
+This is for test.
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ chmod 074 test.txt 
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls -la
+total 12
+drwxrwxr-x 2 jianduojie jianduojie 4096 Feb 16 09:32 .
+drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
+----rwxr-- 1 jianduojie user2        18 Feb 16 09:32 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ cat test.txt      
+cat: test.txt: Permission denied
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ chmod 722 test.txt 
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls -la
+total 12
+drwxrwxr-x 2 jianduojie jianduojie 4096 Feb 16 09:32 .
+drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
+-rwx-w--w- 1 jianduojie user2        18 Feb 16 09:32 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ chmod 074 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ cat test.txt      
+cat: test.txt: Permission denied
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ sudo cat test.txt 
+This is for test.
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ ls -la
+total 12
+drwxrwxr-x 2 jianduojie jianduojie 4096 Feb 16 09:32 .
+drwxrwxr-x 9 jianduojie jianduojie 4096 Feb 16 09:14 ..
+----rwxr-- 1 jianduojie user2        18 Feb 16 09:32 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ chmod 722 test.txt
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ chgrp jianduojie test.txt 
+                                                                                                               
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_6]
+└─$ 
+
