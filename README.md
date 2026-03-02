@@ -48,12 +48,3 @@ This repository contains my comprehensive practical work for the Information Sec
 - **Authenticity:** All code and terminal histories are original and verified by the GitHub commit history.
 - **Evidence-Based:** Detailed `.txt` logs and screenshots are provided in respective folders to prove execution and results.
 
----
-
-## Author & Context
-Created as part of the **Information Security** course at **AUCA** Software Engineering Department. This project aims to demonstrate top-tier proficiency in security concepts and systems programming.
-
----
-
-## License
-All rights reserved. This material is provided strictly for educational and demonstration purposes.
