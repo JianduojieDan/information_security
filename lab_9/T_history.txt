@@ -1,0 +1,338 @@
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ sudo apt update
+Get:1 http://kali.download/kali kali-rolling InRelease [34.0 kB]
+Get:2 http://kali.download/kali kali-rolling/main arm64 Packages [20.5 MB]
+Get:3 http://kali.download/kali kali-rolling/main arm64 Contents (deb) [48.8 MB]
+Fetched 69.4 MB in 11s (6,336 kB/s)                                                                                                     
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ sudo apt search nginx 
+anonip/kali-rolling 1.1.0-2.1 all
+  Anonymize IP-addresses in log-files
+
+centreon-plugins/kali-rolling 0.0~20250303+dfsg-1 all
+  Collection of Nagios plugins to monitor OS, services and network devices
+
+collectd-core/kali-rolling 5.12.0-27+b1 arm64
+  statistics collection and monitoring daemon (core system)
+
+crowdsec/kali-rolling 1.4.6-10.1+b1 arm64
+  lightweight and collaborative security engine
+
+diaspora-installer/kali-rolling 0.9.0.0+debian2+nmu1 all
+  distributed social networking service - installer
+
+diaspora-installer-mysql/kali-rolling 0.9.0.0+debian2+nmu1 all
+  distributed social networking service - installer (with MySQL)
+
+elpa-nginx-mode/kali-rolling 1.1.10-1 all
+  major mode for editing nginx config files
+
+evilginx2/kali-rolling 3.3.0+ds1-0kali1 arm64
+  man-in-the-middle attack framework
+
+fcgiwrap/kali-rolling 1.1.0-16+b2 arm64
+  simple server to run CGI applications over FastCGI
+
+gitweb/kali-rolling 1:2.51.0-1 all
+  fast, scalable, distributed revision control system (web interface)
+
+golang-github-gorilla-handlers-dev/kali-rolling 1.5.2-1 all
+  collection of useful handlers for Go's net/http package
+
+golang-github-hashicorp-hcl-dev/kali-rolling 1.0.0-1.1 all
+  Go implementation of HashiCorp Configuration Language
+
+golang-github-hashicorp-hcl-v2-dev/kali-rolling 2.14.1-2 all
+  Go implementation of HashiCorp Configuration Language (version 2)
+
+golang-github-nginxinc-nginx-plus-go-client-dev/kali-rolling 3.0.1-1 all
+  client for NGINX Plus API for Go (library)
+
+gunicorn/kali-rolling 23.0.0-1 all
+  Event-based HTTP/WSGI server
+
+gunicorn-examples/kali-rolling 23.0.0-1 all
+  Event-based HTTP/WSGI server (examples)
+
+lemonldap-ng-fastcgi-server/kali-rolling 2.22.2+ds-1 all
+  Lemonldap::NG FastCGI server
+
+lemonldap-ng-handler/kali-rolling 2.22.2+ds-1 all
+  Lemonldap::NG handler part
+
+liblemonldap-ng-ssoaas-apache-client-perl/kali-rolling 2.22.2+ds-1 all
+  Lemonldap::NG SSOaaS client for Apache
+
+libnginx-mod-http-auth-pam/kali-rolling 1:1.5.5-4+b1 arm64
+  PAM authentication module for Nginx
+
+libnginx-mod-http-auth-spnego/kali-rolling 1.1.3-2+b1 arm64
+  SPNEGO authentication module for Nginx
+
+libnginx-mod-http-brotli-filter/kali-rolling 1.0.0~rc-7+b1 arm64
+  Brotli lossless compression support for Nginx - filter
+
+libnginx-mod-http-brotli-static/kali-rolling 1.0.0~rc-7+b1 arm64
+  Brotli lossless compression support for Nginx - static
+
+libnginx-mod-http-cache-purge/kali-rolling 1:2.5.5-1 arm64
+  Purge content from Nginx caches
+
+libnginx-mod-http-dav-ext/kali-rolling 1:3.0.0-7+b1 arm64
+  WebDAV missing commands support for Nginx
+
+libnginx-mod-http-echo/kali-rolling 1:0.64-1+b1 arm64
+  Bring echo and more shell style goodies to Nginx
+
+libnginx-mod-http-fancyindex/kali-rolling 1:0.5.2-7+b1 arm64
+  Fancy indexes module for the Nginx
+
+libnginx-mod-http-geoip/kali-rolling 1.28.1-3 arm64
+  GeoIP HTTP module for Nginx
+
+libnginx-mod-http-geoip2/kali-rolling 1:3.4-7+b1 arm64
+  GeoIP2 HTTP module for Nginx
+
+libnginx-mod-http-headers-more-filter/kali-rolling 1:0.39-2+b1 arm64
+  Set and clear input and output headers for Nginx
+
+libnginx-mod-http-image-filter/kali-rolling 1.28.1-3 arm64
+  HTTP image filter module for Nginx
+
+libnginx-mod-http-js/kali-rolling 0.9.4-1 arm64
+  JavaScript HTTP module for Nginx
+
+libnginx-mod-http-lua/kali-rolling 1:0.10.29-2 arm64
+  Lua module for Nginx
+
+libnginx-mod-http-memc/kali-rolling 0.20-3+b1 arm64
+  Extended memcached commands module for Nginx
+
+libnginx-mod-http-modsecurity/kali-rolling 1.0.3-2+b5 arm64
+  WAF module for Nginx
+
+libnginx-mod-http-ndk/kali-rolling 1:0.3.4-4+b1 arm64
+  Nginx Development Kit module
+
+libnginx-mod-http-ndk-dev/kali-rolling 1:0.3.4-4 all
+  Nginx Development Kit module - development files
+
+libnginx-mod-http-perl/kali-rolling 1.28.1-3 arm64
+  Perl module for Nginx
+
+
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ apt-cache depends nginx
+nginx
+  Depends: libc6
+  Depends: libcrypt1
+  Depends: libpcre2-8-0
+  Depends: libssl3t64
+  Depends: zlib1g
+  Depends: nginx-common
+  Breaks: nginx-core
+  Breaks: nginx-extras
+  Breaks: nginx-light
+  Replaces: nginx-core
+  Replaces: nginx-extras
+  Replaces: nginx-light
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ sudo apt install nginx           
+nginx is already the newest version (1.28.1-3).
+nginx set to manually installed.
+The following packages were automatically installed and are no longer required:
+  amass-common             libgirepository-1.0-1   libradare2-5.0.0t64            python3-kismetcapturefreaklabszigbee
+  curlftpfs                libgpgme11t64           librubberband2                 python3-kismetcapturertl433
+  gir1.2-girepository-2.0  libgpgmepp6t64          libsnmp40t64                   python3-kismetcapturertladsb
+  libann0                  libinstpatch-1.0-2      libsphinxbase3t64              python3-kismetcapturertlamr
+  libarmadillo14           libjs-jquery-ui         libsqlcipher1                  python3-multipart
+  libaudio2                libjs-underscore        libswscale8                    python3-pysmi
+  libavfilter10            liblab-gamut1           libudfread0                    python3-xlrd
+  libavformat61            libmjpegutils-2.1-0t64  libvdpau-va-gl1                python3-xlutils
+  libbluray2               libmongoc-1.0-0t64      libwireshark18                 python3-xlwt
+  libbson-1.0-0t64         libmpeg2encpp-2.1-0t64  libwiretap15                   python3-yaswfp
+  libcdt5                  libmplex2-2.1-0t64      libwsutil16                    python3-zombie-imp
+  libcgraph6               libmupdf25.1            libyelp0                       ruby-unf-ext
+  libconfig-inifiles-perl  libnet1                 pocketsphinx-en-us             samba-ad-dc
+  libdisplay-info2         libobjc-14-dev          python3-bluepy                 samba-ad-provision
+  libfuse2t64              libplacebo349           python3-click-plugins          samba-dsdb-modules
+  libgav1-1                libpocketsphinx3        python3-fs
+  libgdal37                libportmidi0            python3-gpg
+  libgeos3.14.0            libpostproc58           python3-kismetcapturebtgeiger
+Use 'sudo apt autoremove' to remove them.
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 3
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ sudo apt autoremove   
+REMOVING:                       
+  amass-common             libgirepository-1.0-1   libradare2-5.0.0t64            python3-kismetcapturefreaklabszigbee
+  curlftpfs                libgpgme11t64           librubberband2                 python3-kismetcapturertl433                            
+  gir1.2-girepository-2.0  libgpgmepp6t64          libsnmp40t64                   python3-kismetcapturertladsb                           
+  libann0                  libinstpatch-1.0-2      libsphinxbase3t64              python3-kismetcapturertlamr                            
+  libarmadillo14           libjs-jquery-ui         libsqlcipher1                  python3-multipart                                      
+  libaudio2                libjs-underscore        libswscale8                    python3-pysmi                                          
+  libavfilter10            liblab-gamut1           libudfread0                    python3-xlrd                                           
+  libavformat61            libmjpegutils-2.1-0t64  libvdpau-va-gl1                python3-xlutils                                        
+  libbluray2               libmongoc-1.0-0t64      libwireshark18                 python3-xlwt                                           
+  libbson-1.0-0t64         libmpeg2encpp-2.1-0t64  libwiretap15                   python3-yaswfp                                         
+  libcdt5                  libmplex2-2.1-0t64      libwsutil16                    python3-zombie-imp                                     
+  libcgraph6               libmupdf25.1            libyelp0                       ruby-unf-ext                                           
+  libconfig-inifiles-perl  libnet1                 pocketsphinx-en-us             samba-ad-dc                                            
+  libdisplay-info2         libobjc-14-dev          python3-bluepy                 samba-ad-provision                                     
+  libfuse2t64              libplacebo349           python3-click-plugins          samba-dsdb-modules                                     
+  libgav1-1                libpocketsphinx3        python3-fs                                                                            
+  libgdal37                libportmidi0            python3-gpg                                                                           
+  libgeos3.14.0            libpostproc58           python3-kismetcapturebtgeiger                                                         
+                                                                                                                                         
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 69, Not Upgrading: 3
+  Freed space: 398 MB
+
+Continue? [Y/n] y
+(Reading database… 464111 files and directories currently installed.)
+Removing amass-common (4.2.0-0kali1)…
+Removing curlftpfs (0.9.2-10)…
+Removing gir1.2-girepository-2.0:arm64 (1.86.0-6)…
+Removing libann0 (1.1.2+doc-9+b3)…
+Removing libgdal37:arm64 (3.11.3+dfsg-1)…
+Removing libarmadillo14 (1:14.2.3+dfsg-1)…
+Removing libaudio2:arm64 (1.9.4-9.1)…
+Removing libavfilter10:arm64 (7:7.1.1-1+b5)…
+Removing libavformat61:arm64 (7:7.1.1-1+b5)…
+Removing libbluray2:arm64 (1:1.3.4-1+b3)…
+Removing libmongoc-1.0-0t64 (1.30.4-1)…
+Removing libbson-1.0-0t64 (1.30.4-1)…
+Removing libcgraph6:arm64 (2.42.4-3)…
+Removing libcdt5:arm64 (2.42.4-3)…
+Removing libconfig-inifiles-perl (3.000003-4)…
+Removing libdisplay-info2:arm64 (0.2.0-2)…
+Removing libfuse2t64:arm64 (2.9.9-9+b1)…
+Removing libgav1-1:arm64 (0.19.0-3+b1)…
+Removing libgeos3.14.0:arm64 (3.14.0-1)…
+Removing libgirepository-1.0-1:arm64 (1.86.0-6)…
+Removing libgpgmepp6t64:arm64 (1.24.2-3)…
+Removing libgpgme11t64:arm64 (1.24.2-3)…
+Removing libinstpatch-1.0-2:arm64 (1.1.7-1.1)…
+Removing libjs-jquery-ui (1.13.2+dfsg-1)…
+Removing libjs-underscore (1.13.7~dfsg+~1.13.0-6)…
+Removing liblab-gamut1:arm64 (2.42.4-3)…
+Removing libmpeg2encpp-2.1-0t64:arm64 (1:2.1.0+debian-8.1+b1)…
+Removing libmplex2-2.1-0t64:arm64 (1:2.1.0+debian-8.1+b1)…
+Removing libmjpegutils-2.1-0t64:arm64 (1:2.1.0+debian-8.1+b1)…
+Removing libmupdf25.1 (1.25.1+ds1-6)…
+Removing libnet1:arm64 (1.3+dfsg-2)…
+Removing libobjc-14-dev:arm64 (14.3.0-12)…
+Removing libplacebo349:arm64 (7.349.0-3)…
+Removing libpocketsphinx3:arm64 (0.8+5prealpha+1-15+b5)…
+Removing libportmidi0:arm64 (1:217-6.1+b4)…
+Removing libpostproc58:arm64 (7:7.1.1-1+b5)…
+Removing libradare2-5.0.0t64:arm64 (5.9.8+dfsg-2)…
+Removing librubberband2:arm64 (3.3.0+dfsg-2+b3)…
+Removing libsnmp40t64:arm64 (5.9.4+dfsg-2)…
+Removing libsphinxbase3t64:arm64 (0.8+5prealpha+1-21+b1)…
+Removing libsqlcipher1:arm64 (4.6.1-2)…
+Removing libswscale8:arm64 (7:7.1.1-1+b5)…
+Removing libudfread0:arm64 (1.1.2-1+b2)…
+Removing libvdpau-va-gl1:arm64 (0.4.2-2)…
+Removing libwireshark18:arm64 (4.4.7-1+b1)…
+Removing libwiretap15:arm64 (4.4.7-1+b1)…
+Removing libwsutil16:arm64 (4.4.7-1+b1)…
+Removing libyelp0:arm64 (42.3-3)…
+Removing pocketsphinx-en-us (0.8+5prealpha+1-15)…
+Removing python3-kismetcapturebtgeiger (2023.07.R2-0kali2)…
+Removing python3-bluepy (1.3.0-0kali1+b1)…
+Removing python3-click-plugins (1.1.1.2-1)…
+Removing python3-fs (2.4.16-9)…
+Removing python3-gpg (2.0.0-2+b1)…
+Removing python3-kismetcapturefreaklabszigbee (2025.09.R1-0kali3)…
+Removing python3-kismetcapturertl433 (2025.09.R1-0kali3)…
+Removing python3-kismetcapturertladsb (2025.09.R1-0kali3)…
+Removing python3-kismetcapturertlamr (2023.07.R2-0kali2)…
+Removing python3-multipart (1.3.0-3)…
+Removing python3-pysmi (0.3.4-4)…
+Removing python3-xlutils (2.0.0-0kali3)…
+Removing python3-xlrd (2.0.2-2)…
+Removing python3-xlwt (1.3.0-7)…
+Removing python3-yaswfp (0.9.3-2)…
+Removing python3-zombie-imp (0.0.4-1)…
+Removing ruby-unf-ext (0.0.9.1-1)…
+Removing samba-ad-dc (2:4.23.5+dfsg-1)…
+Removing samba-ad-provision (2:4.23.5+dfsg-1)…
+Removing samba-dsdb-modules:arm64 (2:4.23.5+dfsg-1)…
+Processing triggers for libc-bin (2.42-5)…
+Processing triggers for man-db (2.13.1-1+b1)…
+Processing triggers for wordlists (2026.1.2)…
+Processing triggers for kali-menu (2026.1.3)…
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ systemctl status nginx
+○ nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: man:nginx(8)
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ apt show nginx         
+Package: nginx
+Version: 1.28.1-3
+Priority: optional
+Section: httpd
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 1,642 kB
+Provides: httpd, httpd-cgi, nginx-abi-1.28.1-1
+Depends: libc6 (>= 2.34), libcrypt1 (>= 1:4.1.0), libpcre2-8-0 (>= 10.22), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4), nginx-common (= 1>
+Breaks: nginx-core (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-light (<< 1.22.1-6~)
+Replaces: nginx-core (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-light (<< 1.22.1-6~)
+Homepage: https://nginx.org
+Tag: implemented-in::c, interface::daemon, network::server, network::service,
+ protocol::http, role::program, use::proxying
+Download-Size: 580 kB
+APT-Manual-Installed: yes
+APT-Sources: http://http.kali.org/kali kali-rolling/main arm64 Packages
+Description: small, powerful, scalable web/proxy server
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+
+
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ apt-cache depends nginx
+nginx
+  Depends: libc6
+  Depends: libcrypt1
+  Depends: libpcre2-8-0
+  Depends: libssl3t64
+  Depends: zlib1g
+  Depends: nginx-common
+  Breaks: nginx-core
+  Breaks: nginx-extras
+  Breaks: nginx-light
+  Replaces: nginx-core
+  Replaces: nginx-extras
+  Replaces: nginx-light
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ sudo apt install nginx -y
+nginx is already the newest version (1.28.1-3).
+Summary:                    
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 3
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ which nginx
+/usr/sbin/nginx
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ nginx --version           
+nginx: invalid option: "-"
+                                                                                                                                         
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_9]
+└─$ nginx -version 
+nginx version: nginx/1.28.1
+

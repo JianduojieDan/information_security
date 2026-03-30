@@ -1,0 +1,60 @@
+                                                                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11]
+└─$ sudo apt update                          
+[sudo] password for jianduojie: 
+Hit:1 http://http.kali.org/kali kali-rolling InRelease
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+                                                                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11]
+└─$ sudo apt install git make gcc libncurses5-dev
+Note, selecting 'libncurses-dev' instead of 'libncurses5-dev'
+git is already the newest version (1:2.51.0-1+b1).
+git set to manually installed.
+make is already the newest version (4.4.1-3+b1).
+make set to manually installed.
+gcc is already the newest version (4:15.2.0-4).
+gcc set to manually installed.
+libncurses-dev is already the newest version (6.6+20251231-1).
+libncurses-dev set to manually installed.
+Summary:                    
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 3
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11]
+└─$ git clone https://github.com/mtoyoda/sl.git     
+Cloning into 'sl'...
+remote: Enumerating objects: 97, done.
+remote: Counting objects: 100% (45/45), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 97 (delta 36), reused 34 (delta 34), pack-reused 52 (from 1)
+Receiving objects: 100% (97/97), 644.48 KiB | 286.00 KiB/s, done.
+Resolving deltas: 100% (51/51), done.
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11]
+└─$ ls
+sl
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11]
+└─$ cd sl    
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11/sl]
+└─$ ls
+demo.gif  LICENSE  Makefile  README.ja.md  README.md  sl.1  sl.1.ja  sl.c  sl.h
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11/sl]
+└─$ make        
+gcc -O -Wall -o sl sl.c -lncurses
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11/sl]
+└─$ ls
+demo.gif  LICENSE  Makefile  README.ja.md  README.md  sl  sl.1  sl.1.ja  sl.c  sl.h
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11/sl]
+└─$ ./sl             
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11/sl]
+└─$ cd ..
+                                                                                    
+┌──(jianduojie㉿killer)-[~/Desktop/labs/lab_11]
+└─$ ls
+sl
+
